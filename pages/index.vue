@@ -18,7 +18,7 @@
         class="button abandon"
         @click="setCountdownState(false)"
       >
-        Abandon completed
+        Abandon cycle
       </button>
 
       <button
@@ -26,7 +26,7 @@
         class="button start"
         @click="setCountdownState(true)"
       >
-        Start a completed
+        Start a cycle
       </button>
     </div>
 
@@ -98,7 +98,7 @@ export default Vue.extend({
 
       if (Notification?.permission === 'granted') {
         playAudio('/notification.mp3')
-        sendNotification('New Challenge', {
+        sendNotification('New Challenge!', {
           body: 'A new challenge has started! Go complete it!',
           icon: '/favicon.png'
         })
